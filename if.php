@@ -46,9 +46,9 @@ if ($b !== $c) {
 }
 */
 
-$a = 5;
-$b = 10;
-$c = '10';
+$a = 34;
+$b = 56;
+$c = '56';
 
 // Add an else clause to the net 2 statements
 if ($a < $b) {
