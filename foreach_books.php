@@ -28,10 +28,13 @@ $books = array(
 //list the key value pairs for the data about each book.
 
 foreach ($books as $title => $details) {
-	echo $title . PHP_EOL;
-	echo " Realeased in " . $details[published] . PHP_EOL; 	
-	echo " Written by " . $details[author] . PHP_EOL;
-	echo " Pages " . $details[pages] . PHP_EOL;
+    //asked foreach loop to print books published only after 1950
+	if($details[published] > 1950){   
+       echo $title . PHP_EOL;
+	   echo " Realeased in " . $details[published] . PHP_EOL; 	
+	   echo " Written by " . $details[author] . PHP_EOL;
+	   echo " Pages " . $details[pages] . PHP_EOL;
+    }
 }
 
  ?>
