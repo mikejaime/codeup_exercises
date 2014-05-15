@@ -4,7 +4,8 @@ function add($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
     	echo $a + $b;
     } else {
-        echo "ERROR: Both arguments must be numbers\n";
+        echo "ERROR: Both arguments must be numbers$a \n";
+        echo "Variables Entered: $a & $b";
     }
     echo PHP_EOL;
 }
@@ -17,6 +18,7 @@ function subtract($a, $b) {
     	echo $a - $b;
     } else {
         echo "ERROR: Both arguments must be numbers\n";
+        echo "Variables Entered: $a & $b";
     }
     echo PHP_EOL;
 }
@@ -29,11 +31,12 @@ function multiply($a, $b) {
     	echo $a * $b;
     } else {
         echo "ERROR: Both arguments must be numbers\n";
+        echo "Variables Entered: $a & $b";
     }
     echo PHP_EOL;
 }
 
-multiply(45,2);
+multiply(45,The);
 
 
 function divide($a, $b) {
@@ -45,11 +48,12 @@ function divide($a, $b) {
     	}
     } else {
         echo "ERROR: Both arguments must be numbers\n";
+        echo "Variables Entered: $a & $b";
     }
     echo PHP_EOL;
 }
 
-divide(56,0);
+divide(56,The);
 
 
 function modulus($a, $b) {
@@ -57,6 +61,7 @@ function modulus($a, $b) {
     	echo $a % $b;
     } else {
         echo "ERROR: Both arguments must be numbers\n";
+        echo "Variables Entered: $a & $b";
     }
     echo PHP_EOL;
 }
