@@ -28,4 +28,10 @@ function divide($a, $b) {
 divide(56,3);
 
 
+function modulus($a, $b) {
+    echo $a % $b . PHP_EOL;
+}
+
+modulus(89,3);
+
 ?>
