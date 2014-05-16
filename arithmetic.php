@@ -1,41 +1,43 @@
 <?php
 
-function error($a, $b) {
-	echo "ERROR: Both arguments must be numbers\n";
-    echo "Variables Entered: $a & $b";
+function check($a, $b) {
+    if (is_numeric($a) && is_numeric($b)) {
+        return TRUE;
+    } else {
+        echo "ERROR: Both arguments must be numbers. Variables Entered: $a & $b";
+        return FALSE;
+    }
 }
 
+
 function add($a, $b) {
-    if (is_numeric($a) && is_numeric($b)) {
-    	echo $a + $b;
+    if (check($a, $b)) {
+        return $a + $b;
     } else {
-        error($a, $b);
+        return FALSE;
     }
-    echo PHP_EOL;
 }
 
 add(the,5);
 
 
 function subtract($a, $b) {
-    if (is_numeric($a) && is_numeric($b)) {
-    	echo $a - $b;
+    if (check($a, $b)) {
+        return $a - $b;
     } else {
-        error($a, $b);
+        return FALSE;
     }
-    echo PHP_EOL;
 }
 
 subtract(456,567);
 
 
 function multiply($a, $b) {
-    if (is_numeric($a) && is_numeric($b)) {
-    	echo $a * $b;
+    if (check($a, $b)) {
+        return $a * $b;
     } else {
-        error($a, $b);
+        return FALSE;
     }
-    echo PHP_EOL;
 }
 
 multiply(45,The);
@@ -45,25 +47,22 @@ function divide($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
     	if($b == 0) {
     		echo 'ERROR: You can not divide by 0, please input a different number';
-    	} else {
-    		echo $a / $b;
+            return FALSE;
+    	} elseif(check($a, $b)){
+    		return $a / $b;
     	}
-    } else {
-        echo error($a, $b);
-    }
-    echo PHP_EOL;
+    } 
 }
 
 divide(56,The);
 
 
 function modulus($a, $b) {
-    if (is_numeric($a) && is_numeric($b)) {
-    	echo $a % $b;
+    if (check($a, $b)) {
+        return $a % $b;
     } else {
-        error($a, $b);
+        return FALSE;
     }
-    echo PHP_EOL;
 }
 
 modulus(89,3);
