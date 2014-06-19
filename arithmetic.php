@@ -1,10 +1,13 @@
 <?php
+// the add, subtract, multiply, divide & modulus fuc=nctions
+// are native to php and are implemented here
 
+// error 'check' function - validates values passed are numbers
 function check($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
         return TRUE;
     } else {
-        echo "ERROR: Both arguments must be numbers. Variables Entered: $a & $b";
+        echo "ERROR: Both arguments must be numbers. Variables Entered: $a & $b" . PHP_EOL;
         return FALSE;
     }
 }
@@ -18,6 +21,7 @@ function add($a, $b) {
     }
 }
 
+// passed 'the' to test check function
 add(the,5);
 
 
@@ -66,53 +70,5 @@ function modulus($a, $b) {
 }
 
 modulus(89,3);
-
-
-//  function compare($a, $b) {
-//      echo $a == $b ? 'TRUE' : 'FALSE';
-//      echo PHP_EOL;
-//  }
-//  
-//  compare(42,'42');
-//  
-//  
-//  // compare 2 items
-//  // $a is mixed
-//  // $b is mixed
-//  // $strict is boolean
-//  function compare_2($a, $b, $strict = true) {	//$strict = true, sets true as the default for $strict
-//      if ($strict === true) {
-//      	echo $a === $b ? 'TRUE' : 'FALSE';
-//      } else {
-//      	echo $a == $b ? 'TRUE' : 'FALSE';
-//      }
-//      echo PHP_EOL;
-//  }
-//  
-//  compare_2(42, '42', true);
-//  
-//  
-//  function inspect($variable = null, $dump = true) {
-//  	if ($dump === true) {
-//  		var_dump($variable);
-//  	} else {
-//  		print_r($variable);
-//  	}
-//  }
-//  
-//  inspect(45,'45', false);
-//  
-//  
-//  function adder($a, $b) {
-//      if (is_numeric($a) && is_numeric($b)) {
-//      	echo $a + $b;
-//      } else {
-//      	echo 'ERROR: both $a and $b should be numbers'
-//      }
-//      echo PHP_EOL;
-//  }
-//  
-//  adder(4,5);
-
 
 ?>
