@@ -26,11 +26,25 @@ $books = array(
 // Construct a loop that iterates through each book and then each 
 // book's keys and values. Have it output the book's title, then 
 // list the key value pairs for the data about each book.
-
 foreach ($books as $book => $properties) {
-    echo $book . PHP_EOL;
-    foreach ($properties as $property => $value) {
-        echo "{$property}: {$value}\n";
+    //asked foreach loop to print books published only after 1950
+    if(isset($properties[published]){   
+        echo $book . PHP_EOL;
+        foreach ($properties as $detail => $value) {
+            echo "{$detail}: {$value}\n"
+        }
+    }
+}
+
+
+// Update your loop to only show books that were written after 1950.
+foreach ($books as $book => $properties) {
+    //asked foreach loop to print books published only after 1950
+    if(isset($properties[published]) && $properties[published] > 1950){   
+        echo $book . PHP_EOL;
+        foreach ($properties as $detail => $value) {
+            echo "{$detail}: {$value}\n"
+        }
     }
 }
 
