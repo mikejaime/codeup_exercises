@@ -28,13 +28,10 @@ if ($x > 0 && $x < 10){
 }
 
 if ($y > 0 && $y < 10){
-	echo "$x is greater than 0 AND less than 10\n";
+	echo "$y is greater than 0 AND less than 10\n";
 }
 if ($z > 0 && $z < 10){
-	echo "$x is greater than 0 AND less than 10\n";
+	echo "$z is greater than 0 AND less than 10\n";
 }
-
-
-
 
  ?>
