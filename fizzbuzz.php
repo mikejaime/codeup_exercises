@@ -6,12 +6,16 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
  multiples of both three and five print “FizzBuzz”.
 */
 
-for ($i = 1; $i <= 100; $i++) {
-	if($i % 3 == 0 && $i % 5 == 0){
+for ($i = 1; $i <= 100; $i++){
+	
+	$divBy3 = ($i % 3 == 0);
+	$divBy5 = ($i % 5 == 0);
+
+	if($divBy3 && $divBy5) {
     	echo "FizzBuzz\n";
-    } elseif ($i % 3 == 0) {
+    } elseif ($divBy3) {
     	echo "Fizz\n";
-    } elseif ($i % 5 == 0){
+    } elseif ($divBy5) {
     	echo "Buzz\n";
     } else {
     	echo "$i\n";
