@@ -21,4 +21,13 @@ foreach ($things as $dataType) {
     }
 } 
 
+// Construct a loop that iterates through each value and outputs only
+// values with a type that is scalar
+
+foreach ($things as $dataType) {
+    if (is_scalar($dataType)) {
+        echo "{$dataType} is a scalar\n";
+    } 
+} 
+
  ?>
