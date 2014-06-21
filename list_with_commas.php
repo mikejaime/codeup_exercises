@@ -2,7 +2,16 @@
 
 // Converts array into list n1, n2, ..., and n3
 function humanized_list($array) {
-	sort($array);
+	echo 'Alpabetized (Y)es or (N)o : ';
+	switch(get_input(true)) {
+        case 'N':
+            break;
+        case 'Y':
+            arsort($array);
+            break;
+        default;
+        	break;
+    }
 	return implode("\n", $array);
 }
 
@@ -11,11 +20,9 @@ $physicists_string = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mal
 
 //convereted string to array
 $physicists_array = explode(', ', $physicists_string);
-
-
 echo humanized_list($physicists_array) . PHP_EOL;
 
-//removed last index and stored it in variable
+//removed last index & assigns it to variable
 $last = array_pop($physicists_array);
 
 
